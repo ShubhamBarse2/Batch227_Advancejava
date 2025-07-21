@@ -1,0 +1,71 @@
+
+Todays Lecture Agenda :
+ 
+        
+                                  Introduction with Servlet :
+
+
+-it is an API(Application Programming Interface) for java Language.
+-Servlet is a server side technology.
+-Which is used to handle the client request. process the request and generate the dynamic response.
+-A servlet are used to handle dynamic content on web server.
+-they are platform independent and follows the java EE specification.
+-servlet technology is an robust and scalable because of java language.
+-there are many interface and classes in the servlet API such as Servlet, GenericServlet, HttpServlet...
+-the servlet defines lifecycle methods are init(), service(),destroy(). 
+-server-side technology used to create dynamic web applications.
+-Servlets are Java classes that run in a web server and can respond to client(Browser) requests, typically over HTTP. They are part of the Java EE (Enterprise Edition) platform and provide a powerful way to handle requests, manage sessions, and generate responses like HTML, XML, or JSON.
+
+-Servlets follow the request-response model and interact with web clients through a HttpServletRequest (request) (which encapsulates client request information) and HttpServletResponse (response) (which allows the servlet to generate a response).
+
+
+* Servlet Lifecycle :
+
+1) Servlet is loaded
+2) Servlet is Instantiated
+3) Servlet is Initialized (init)
+4) Service the Request(Request Handling) (service)
+5) Servlet is Destroyed (destroy)
+ 
+
+* A simple servlet lifecycle consists of:
+
+Initialization (init())     : This method is called once when the servlet is initialized. (Return type: void).
+
+Request handling (service()): This method is called for each client request and is responsible for handling the request and generating            
+                              a response.  (Return type: void).
+             
+Termination (destroy())     : when the server is shutdown destroy method is invoked and servlet object is destroy.
+                             This method is called once when the servlet is about to be destroyed. (Return type: void).
+
+
+
+GenericServlet :
+
+1) Generic servlet is protocol independent.
+2) it can be used with any protocol such as HTTPS,SMTP,FTP...
+3) the service method is abstract.
+4) request and response objects is not present.
+
+HttpServlet :
+
+1) http servlet is protocol dependent.
+2) it can be used with only http protocol.
+3) the service method is non-abstract.
+4) request and response objects is present.
+
+
+summary & Interview Questions 
+
+1) What is Servlet 
+2) Explain lifecycle of servlet
+3) Explain lifecycle methods of servlet
+4) how many objects of servlet is created ? when servlet object is created
+-(only one object at the time of first request by the servlet).
+5) Diff betn GenericServlet and HttpServlet ?
+6) where we can create html file = (Webapp/WEBINF)
+
+
+
+
+

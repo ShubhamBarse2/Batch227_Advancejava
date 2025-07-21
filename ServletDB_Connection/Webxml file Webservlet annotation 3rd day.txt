@@ -1,0 +1,60 @@
+
+Todays Lecture Agenda :
+
+
+1) Web.xml file/Deployment Descriptive file :
+
+- the web xml file is also called as deployment descriptive file 
+- we create an web.xml file in WEBINF folder
+- in latest version it is not compulsory to create xml file
+- in latest version we used the @webservlet annotation on the class.
+
+
+2) @WebServlet Annotation :
+
+- this annotation is used only for servlet class level.
+-The @WebServlet annotation is used in Java Servlets to declare a servlet without needing to define it in the web.xml file. It simplifies the configuration process by allowing you to directly map a servlet to a specific URL pattern within the servlet class.
+- it is an exactly replacement of web.xml file/ deployment descriptive file
+
+
+
+http GET() :
+
+1) limited amount of data can be sent because data is sent in header
+2) not secure because data is exposed in URL bar
+3) can be bookmarked
+4) it is more efficient
+5) get is slightly faster 
+
+http POST() :
+
+1) large amount of data can be sent because data is sent in body
+2) secured because data is not exposed in URL
+3) cannot be bookmarked
+4) it is less efficient
+5) post is slightly slower
+
+
+doGet() : is used to handle HTTP GET request. used for retrieving data from the server.
+
+doPost() : is used to handle the HTTP POST request. typically used for submitting data to the server.
+
+
+
+Note : By default html call Get method.
+
+
+summary & Interview Questions
+
+1) what is @Webservlet annotation
+2) what is web.xml file/ deployment descriptor file
+3) what is difference betn get and post
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+Last Lecture Agenda :
+
+1) Web.xml file/Deployment Descriptive file :
+2) @WebServlet Annotation :
+
+
+Todays Lecture Agenda :
+
+
+http GET() :
+
+1) limited amount of data can be sent because data is sent in header
+2) not secure because data is exposed in URL bar
+3) can be bookmarked
+4) it is more efficient
+5) get is slightly faster
+
+http POST() :
+
+1) large amount of data can be sent because data is sent in body
+2) secured because data is not exposed in URL
+3) cannot be bookmarked
+4) it is less efficient
+5) post is slightly slower
+
+
+doGet() : is used to handle HTTP GET request. used for retrieving data from the server.
+
+doPost() : is used to handle the HTTP POST request. typically used for submitting data to the server.
+
+
+Summary and Questions:
+
+what is difference betn get and post
+when we used doget method/dopost method
+
+TASK : 
+
+
+Register page connect with database.
+
+Registration Form :
+
+- fields
+
+1) First name 
+2) Last name
+3) Email 
+4) Password
+5) Mobile number
+6) DOB
+7) Graduation passing year
+8) Specialization
+9) Semester
+10) 10th %
+11)12th % 
+12)Graduation %
+13)Fresher/Experience
+14)Gender 
+
+
+
+
+
+
+ 

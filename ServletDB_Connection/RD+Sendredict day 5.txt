@@ -1,0 +1,65 @@
+
+Todays Lecture Agenda :
+
+ Servlet Collaboration :
+
+- Call from one servlet to another servlet is called servlet collaboration. We can add another HTML file (i.e. call from one servlet to another html file). To perform servlet collaboration task we have to required an object of request Dispatcher. Request dispatcher object we can obtained from HttpServletRequest 
+
+
+Request Dispatcher (Interface) :
+
+in servlet RequestDispatcher is an interface provided by the servlet API. which is present in Jakarta package. it is used to forward request from one servlet to another servlet. or to include the response from another servlet. in the response of the current servlet.
+essentially, it helps in controlling the flow of request and response between different servlet or resource.
+ 
+- It has 2 methods 
+	- forward(request,response)
+	- include(request,response)
+
+- In This case URL is not Change
+
+ - Forward(): used to forward the request to another resource on the server.                                                                                              
+
+ - include(): used to include the another file in the current file.     note : (like as out.print("")statement also executed... )
+
+
+
+
+SendRedirect() : 
+
+
+
+response.sendRedirect("url");  
+
+
+SendRedirect() (method) : 
+
+it is method of HttpServletResponse interface. in the servlet API. this method is used for redirect the response to another resource.
+(such as servlet, jsp, html file or external).
+
+
+Diff betn both
+
+SendRedirect :
+ 
+1) it is used for external redirection
+2) it redirect the request to a different application or URL
+3) it is called by HttpServletResponse objects
+4) it changes the URL on the browser
+
+RequestDispatcher :
+
+1) it is used for internal request redirections
+2) its forward or includes the request to the same application or URL
+3) it has two methods 1) forward() 2) include()
+4) it does not changes the URL on the browser
+
+
+Summary and Interview Questions
+
+1) what is diff betn RequestDispatcher and SendRedirect method
+2) what is RequestDispatcher
+3) we have RequestDispatcher then why we used sendredirect
+4) what is servlet collaboration
+
+
+ 
