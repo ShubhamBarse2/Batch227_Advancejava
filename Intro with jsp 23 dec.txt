@@ -1,0 +1,196 @@
+*) HttpSession :
+
+HttpSession in Servlets is used to track user sessions across multiple requests and responses. It allows storing user-specific data that can persist between different pages or servlets.
+
+You can store objects (attributes) in the session using methods like setAttribute("name", "vikas") and retrieve them using getAttribute(name).
+
+syntax :
+
+HttpSession session = request.getSession();
+session.setAttribute("name","vikas");
+
+
+       
+                Introduction with JSP(Java Server Pages) : JSP = (html + java(servlet))
+
+- JSP stands for java server pages.
+- jsp is an server side technology.
+- which is used to create dynamic web pages
+- jsp is an advanced version of servlet
+- this technology is used to create dynamic web pages in the form of HTML
+- this is an extension to the servlet technology and generate servlet from an page
+- the jsp pages are internally convert into the servlet
+- jsp can also be used in combination with servlet
+- also we can write backend code (java code) inside jsp but it is not recommended
+- its having own lifecycle methods such as jspInit(), jspService() and jspDestroy().
+
+
+JSP (Java Server Page)
+- JSP are out-dated -- still used in old applications.
+	- JSP only Support 3 methods
+		1 GET 2 POST 3 HEAD
+	- JSP = Presentation Logic* + Business Logic
+	- JSP is front-end technology i.e. web ui.
+* JSP is converted into the servlet during execution.
+	- JSP page -- .jsp
+	- It Contain HTML tags + JSP tags + Custom tags + Java code
+	* Writing/Embedding Java code in JSP pages is "worst" practice.
+	* Best practice is to use "Java Beans" with JSP pages for BL. 
+	
+
+*)JSP Lifecycle :
+
+1) Translation              : jsp file ---> servlet.
+2) Compilations             : servlet is compiled into java bytecode.
+3) Loading and Instantiated  : class file loaded on server and object is created.
+4) Initialization           : jspInit() method is invoked.
+5) Request Handling         : jspService() method is invoked.to process the request.
+6) Destroy                  : jspDestroy() method is invoked to destroy the object.
+
+
+
+*) JSP Lifecycle methods :
+
+jspInit()    : it is invoked only once. same as init() method of the servlet
+jspService() : it is invoked at each request. same as service() method of the servlet
+jspDestroy() : it is invoked only once. same as destroy() method of the servlet
+
+
+
+
+*) How does JSP works :
+
+1) jsp file contains html or xml markup along with jsp elements. which are special tags for embedding java code
+2) when jsp pages is requested. the web container converts it into a servlet
+3) compiles its into an java bytecode and executes its. 
+
+
+*) Tags in JSP :
+
+1) Directive tag : provide global information about the pages (Syntax: <%@ directive attribute="value" %>)
+2) Declarative   : declare variable and methods (Syntax: <%! Java code %>)
+3) Scriplet      : write an java code directly into the jsp pages (Syntax: <% Java code %>)
+4) Expression    : evaluate the expression and display their request into the output (Syntax: <%= expression %>)
+5) Action        : perform action likes including others flies forwarding request (<jsp:include page="header.jsp"/>)
+6) custom        : allow custom functionality through tag libraries (<%@ taglib prefix="custom" uri="http://example.com/taglib" %>
+<custom:myTag />)
+
+
+
+*) Implicit Objects :
+
+Request
+Response
+out 
+session
+
+
+
+
+1) JSP implicit objects are predefine variable that are available for used without any explicit declaration or initializations
+2) these objects are automatically created by the jsp container and provide access to various functionality and information related to the jsp pages.
+
+Examples :
+
+objects             type         
+
+out              PrintWriter
+request          HttpServletRequest
+response         HttpServletResponse
+config           ServletConfig
+session          HttpSession
+application      ServletContext
+pagecontext      PageContext
+page             Object
+exception        Throwable
+context          Context
+
+
+
+
+diff betn jsp and servlet :
+
+Note : these both are the server side technologies.
+
+servlet :
+
+1) Servlet is java code
+2) it is hard to write code in servlet
+3) servlet runs faster than jsp
+4) in MVC architecture servlet works as controller
+5) servlet can accepts all protocol request including HTTPS
+6) servlet contains lifecycle methods such as init(), service() and destroy().
+
+JSP : 
+
+1) jsp is an html base code.(we write also java code but it is not recommended)
+2) its easier to write code in jsp compared to servlet
+3) jsp runs slower than servlet because. take time to compiled and converts into servlet.
+4) in MVC architecture jsp works as view for displaying output
+5) jsp can only accepts HTTP request
+6) jsp contains lifecycle methods such as jspInit(), jspService() and jspDestroy().
+
+
+
+
+MVC : 
+
+
+frontend                   backend                          database 
+
+html/jsp                  servlet                             jdbc
+
+Angular/react             Spring/SpringBoot                   ORM(Hibernate)
+
+
+APIs :    
+
+Model        : Database Connection Code                  : JDBC / ORM
+Views        : Displaying OUTPUT UI                      : JSP / Ang,React
+Controller   : Calling Functionality                     : Servlet /Spring/ SpringBoot
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+diff betn jsp and html :
+
+HTML : 
+
+1) html provides a non-changing data display or view. static data
+2) no need of server we can run directly
+3) we can-not have java code in html
+4) html runs in the web browser
+5) html is termed as client-side scripting language
+6) as html runs on the local machine, it gets loaded very faster
+
+jsp :
+
+1) jsp provides a dynamic interface for the continuously changing data
+2) there is a need of jsp container or server to execute jsp code
+3) we can have java code in jsp
+4) jsp runs straight on the web server
+5) jsp is termed as server-side scripting language
+6) jsp takes some time to load as it need to interact with the web server
+
+
+
+Summary and Interview Questions
+
+1) what is JSP/ need of jsp/ explain jsp
+2) diff betn jsp and servlet
+3) what is implicit object/ types of implicit object
+4) what are the tags/ and types of tags
+5) what is lifecycle of jsp/ explain its methods 
+6) How does JSP works ? explain its working
+7) diff betn jsp and html
+ 
