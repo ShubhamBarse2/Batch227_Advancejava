@@ -1,0 +1,71 @@
+
+*) Stages of objects in hibernate :
+ 
+-Transient    - object is before associated 
+-Persistent   - object is associated with a session
+-Detached     - object has been detached from session
+-Remove       - object has been removed
+
+
+
+*) (hibernate.cfg.xml) file :
+
+- the configuration file contains database connection details, mapping recourse and other required by hibernate setting, also    
+  contains Dialect information. 
+- hibernate mapping file are xml files that defines the mapping between  java classes and database tables, they specify how each        
+  property of a java class is map to a column in a database table.
+
+
+
+*) Dialect :
+
+- A dialect in hibernate is class that acts as a bridge between java JDBC type and SQL type.
+
+
+Configuration (class) :
+
+- the configuration is class present in org.hibernate package
+- the configuration class represent the configuration setting for hibernate ,such as database connection properties, mapping files 
+or Annotation and other environment specific configuration.
+
+
+SessionFactory (Interface) :
+
+- the sessionfacotry it is an interface present in org.hibernate package.
+- session factory provides the instance(objects) of session
+- it is a factory of session, and client of connection provider
+- it holds second level cache of data.
+
+Session (Interface) : 
+
+- it is an interface present in org.hibernate package package.
+- it maintain a connection between the hibernate application and database
+- it provides methods to store, update, delete or fetch data from the database such as persist(),remove(),merge(),update(),save(),   get(),load()....
+- it is a factory of Query, criteria e.i it provides factory methods to return this instance.
+
+
+Transaction (Interface) :
+
+- the Transaction is an interface present in org.hibernate package
+- it represent a database transaction in hibernate
+- it provides methods to begin , commit and rollback transactions.
+
+
+Summary and Interview Question :
+
+- what is ORM
+- what are the core interfaces of hibernate technology / key components of hibernate 
+- what are the advantages of using ORM over JDBC
+- Explain hibernate architecture
+- what is purpose of the hibernate configuration file(hibernate.cfg.xml)
+- what is Configuration
+- features of hibernate :
+ans => automatic persistent, ORM ,Transaction management, lazy loading, automatic schema generation criteria API,(HQL), mapping concepts.
+- How to Insert the data in hibernate => save()/persist()     return type : void
+- How to Update the data in hibernate => update()/merge()     return type : void 
+- How to delete the data in hibernate => delete()/remove()    return type : void
+
+
+
+  
+
