@@ -1,0 +1,62 @@
+Todays Lecture Agenda :
+
+Maven: = 
+ 
+	- It is project Management Tool.
+		- It is Build Tool.Open source,
+		- add required jars & their dependencies in project classpath & deployment assembly
+		- compilation of the project.
+		- testing & packaging project deployment assembly.
+		- Reporting
+	- Meaning of Maven is "Accumulator of knowledge". 
+		
+	- Maven is automation & management tool developed by Apache s/w foundation. It is based on POM (project Object Model)=> config of project
+		- basic Config : java version, spring version, maven version etc...
+		- dependencies: third party jar files to be added in project.
+		- packaging info: jar(java archived file) or war(Web ...), name, groupId/artifactId
+		- build settings.
+		- repositories: collection of jars.
+		
+	- Maven can build project into desired output such as .jar, .war etc.
+	- It is mostly used for java based project.
+	- Maven is written in java.
+	- Life cycles:
+		- build --> build the project with multiple phases.
+			- validate/Generate Recourse: project validation & download dependencies.
+			- compile: compile project (.class).
+			- test: runs all unit test cases.
+			- package: create .jar or .war file.
+			- install: install jar in local repo.
+			- deploy: install jar in remote repo.
+		
+		- clean --> clean the project (delete generated files .class, ...)
+2 How Maven Works 
+		
+Java Project Structure
+	- Source code
+	- Test code
+	- resource (assets,files,directories)
+	- dependances/Library
+	- Configuration
+	- Task Runner (build,test,Run)
+	- Reporting
+
+
+summary & Interview Questions.
+
+1 What is Maven ?
+2 Explain How Maven Works ? 
+3 deff betn maven and Gradle ?
+4 how we can manage the dependencies ?
+5 what is diff betn local and remote repository ? 
+6 what is the role of plug-ins in maven ?
+
+
+
+
+
+
+
+
+
+
