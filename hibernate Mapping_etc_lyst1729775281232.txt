@@ -1,0 +1,71 @@
+Todays Lecture Agenda :
+
+ ONE-TO-ONE 
+
+Association mapping in hibernate :
+
+*) ONE-TO-ONE :(@OneToOne)
+
+- in hibernate One to One  mapping is used to establish a relationship between two entities where one instance of an entity is associated with exactly one instance of another entity.
+example : one = student
+          one = laptop
+
+*) ONE-TO-MANY :
+
+- in hibernate a one to many relationship is established when one instance of an entity is associated with multiple instance of another entity.
+example :   one  = department 
+            many = employees
+
+
+*) MANY-TO-ONE :
+
+- opposite of One-To-Many
+with same example :
+
+          
+*) MANY-TO-MANY :
+
+-in hibernate a many to many relationships represent a situation where multiple instance of one entity are associated with multiple instance of another entity 
+example : many = students
+          many = courses
+
+
+
+Eager Loading vs Lazy Loading
+                        
+
+                       Lazy Loading                              Eager Loading
+
+Feature	Lazy         Loading (Default)	                         Eager Loading
+Fetch Type	     FetchType.LAZY	                         FetchType.EAGER
+When Data is Loaded? When accessed	                         Immediately
+Performance	     Better for large data                       Slower (loads everything)
+Proxy Object?	     Yes	                                 No
+Session Issue	    Throws LazyInitializationException    	 No exception
+                    if accessed after session closes
+
+
+
+ - First-Level Cache (Session Cache)
+Scope: A Hibernate session (transaction scope).
+By default: Hibernate uses a first-level cache which is associated with the Hibernate session object. This is a mandatory cache provided by Hibernate.
+Purpose: To reduce the number of database queries by caching entities within the current session.
+
+
+ - Second-Level Cache (Session factory Cache)
+Scope: Across multiple sessions and transactions (session factory scope).
+Configuration: Second-level caching is optional and needs to be explicitly configured using a third-party cache provider like EHCache, Infinispan, or OSCache, redis
+Purpose: To store entities across sessions and minimize database access even further by caching objects beyond the lifespan of a single session.
+To enable the second-level cache, you need to configure it in the hibernate.cfg.xml and specify the cache provider.
+
+
+Proxy Objects :
+
+A proxy object is a placeholder for an entity that Hibernate uses to implement lazy loading. When Hibernate retrieves an entity lazily, it doesn't fetch the actual data from the database immediately. Instead, it creates a proxy that contains only the identifier (primary key) of the entity. 
+
++example :
+
+ Employee employee = session.load(Employee.class, employeeId);
+ System.out.println("Employee Name: " + employee.getName());
+
+

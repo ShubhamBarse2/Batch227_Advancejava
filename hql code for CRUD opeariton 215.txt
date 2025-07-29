@@ -1,0 +1,81 @@
+
+
+HQL - Hibernate Query Language : 
+
+CRUD Operation : using HQL : 
+
+
+refer this code : 
+
+1) GetSingleRecord : 
+
+int id =121;
+
+String hqlQuery = "from Student where id=:id";
+
+
+
+String hqlQuery = "from Hospital where id=:id";
+
+//		Query<Hospital> query = ss.createQuery(hqlQuery, Hospital.class);
+//		query.setParameter("patientID", patientID);
+//		Hospital h = query.uniqueResult();
+
+		Query query = ss.createQuery(hqlQuery, Hospital.class);
+		query.setParameter("id", id);
+		Hospital h = (Hospital) query.getSingleResult();
+
+		System.out.println(h);
+
+
+
+
+
+delete Data :
+
+
+
+int id = 1;
+		String hqlQuery ="delete from Hospital where id=:id";
+
+		MutationQuery query = ss.createMutationQuery(hqlQuery);
+		query.setParameter("id", id);
+		query.executeUpdate();
+
+		System.out.println("Data is Deleted...");
+
+
+
+Update Data : 
+
+
+	String hqlQuery = "update Hospital set Pname=:mypname, age=:age, city=:city where id=:id";
+
+		MutationQuery query = ss.createMutationQuery(hqlQuery);
+		query.setParameter("mypname", "sahil");
+		query.setParameter("age", 25);
+		query.setParameter("city", "pune");
+		query.setParameter("id", id);
+
+		query.executeUpdate();
+
+		System.out.println("Data is updated...");
+
+
+
+
+
+Insert Record :
+
+
+String hqlQuery = "insert into hospital(Pname,age,city)values(:Pname,:age,:city)";
+		Query<Hospital> query = ss.createNativeQuery(hqlQuery);
+		query.setParameter("Pname", "om");
+		query.setParameter("age", 27);
+		query.setParameter("city", "goa");
+		query.executeUpdate();
+
+		System.out.println("Data is inserted....");
+
+
+

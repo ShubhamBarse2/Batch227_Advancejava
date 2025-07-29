@@ -1,0 +1,84 @@
+
+Todays Lecture Agenda :
+
+CriteriaBuilder: Creates a CriteriaQuery.
+CriteriaQuery: Defines the structure of the query.
+Root: Specifies the entity from which to start querying.
+Query: Executes the constructed query and retrieves the result.
+
+
+Criteria (Interface) :
+
+it is an interface present in org.hibernate package/jakarta.persistent package
+the object of criteria used for the creation and execution of the object oriented criteria queries.
+
+
+
+Session and SessionFactory :
+
+session :
+- it represent database connection 
+- it holds the first -level cache(L1 cache) of data / it enable by default
+- it is short lived
+- it is available for particular transaction 
+
+sessionfactory :
+- it is factory class for session
+- it holds the second -level cache(L2 cache) of data / it is not enable by default 
+- it is long lived
+- it is available for the whole application
+
+
+
+HQL (Hibernate Query Language) :    (note : as compare to the HQL,SQL is faster(HQL internally converted into the SQL) )
+
+- HQL stands for hibernate query language. it is also called as object oriented query language.it is like as structure query language(SQL). it uses an objects of Entity class.
+
+
+*) Stages of objects in hibernate :
+ 
+-Transient    - object is before associated 
+-Persistent   - object is associated with a session
+-Detached     - object has been detached from session
+-Remove       - object has been removed
+
+
+diff betn Get() and Load() methods : 
+
+get() :
+- return null if an object is not found
+- get method always hit the database
+- it return the real objects not proxy object
+- it should be used if you are not sure about the existence of instance
+
+Load() : 
+- throws object not found Exception if an object is not found
+- load method does not hit the database
+- it returns proxy objects
+- it should be used if you are sure that instance exits
+
+
+Summary and Interview Question 
+
+- How to Integrate hibernate in eclipse
+- what is criteria?
+- Diff betn session and sessionfactory
+- what is HQL?/ how is HQL query created / diff betn HQL and SQL 
+- Diff betn Get() and Load() method in hibernate
+
+- is SessionFactory 
+ SessionFactory is thread safe objects => YES many threads cannot access it simultaneously 
+Session => No
+
+
+
+
+
+
+
+
+
+
+
+
+
