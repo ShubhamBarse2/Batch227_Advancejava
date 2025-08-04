@@ -1,0 +1,79 @@
+Todays Lecture Agenda :
+
+Introduction with Spring Core :
+
+what is spring : (spring core - 6.0.17v & context - 6.0.17v)
+- it is lightweight, open source, loosely couple and integrated framework for developing enterprise application in java
+- it was developed by Rod Johnson in the year 2003.
+- by using spring we can developed standalone and enterprise applications.
+- the spring framework is one of the most popular java framework and it is used by many large companies.
+- the spring framework includes several modules such as IOC,AOP,DAO, context, ORM, web MVC etc.
+- Spring can be easily integrated with others popular frameworks such as hibernate(ORM) and JPA
+- it can be helps to improve the quality maintainability, and scalability of applications
+- in a spring no need to write more code there are some annotations provide by the spring. 
+
+- Spring Framework:
+		- 2003 -- Rod Johnson -- sourceforge.net -- Open Source project.
+		- Spring 1.x
+		- Spring 2.x
+		- * Spring 3.x -- Annotation based config.
+		- * Spring 4.x => 4.x.x
+		- Spring 5.x
+		- Spring 6.x
+		
+- Spring Features / Advantages 
+		- Modular -- different jars for different functionalities.
+		- Flexible -- Most of frameworks follow "All or nothing" policy -- Spring is exception
+		- Test Driven Development -- Unit testing is well integrated in Spring + Supprt for other testing.
+		- Maintainable/Extendable -- Start with interfaces & can change impl over the time.
+		- Exceptions -- Spring convert/wraps all checked exception into unchecked one.
+		- Dependency Injection
+
+
+
+IOC (Inversion of control) : spring container / IOC container / Beans Container
+
+- IoC container: (Inversion of control)
+		-It is used to create object of class, maintain life cycle of object, manage its state,  by spring. So it is called Loosely coupling, for this feature spring is more popular in market
+		 - Mainly it based on two concept DI(Dependency Injection) & IOC (Inversion of control)
+		 
+		- IoC -- Inversion of Control
+			 - It is an architectural(design) pattern describing that programmer do not need to create an object, instead just describe how it should be created. No need to directly connect your components & services together in program, instead just describe which services are needed by which components in a configuration file/xml file. The spring IOC container is then responsible.
+
+			- IOC create a singleton object means that object create only ones instance & we can use that object through out the application whenever we need.
+
+
+IOC Container Has 2 types
+
+ 1 BeanFactory (I)
+	- It is Interface
+	- we can use some implemented classes using this interface
+
+ 2 ApplicationContext (I)
+	- It is Interface
+	- we can use some implemented classes using this interface
+	- Application Context is nothing but spring container.In newer version of spring Application Context to developed enterprise application.
+	- class is used ClassPathXMLApplicationContext
+
+
+			
+	- DI -- Dependency Injection
+	- The object initialization is done by spring -- adding dependencies into the object (i.e. initializing its properties).
+
+			- DI is way to achieving the IOC i.e. to implement IOC we required Dependency Injection
+			- Runtime object creation is not allowed
+			- It Create Object before runtime & it inject whenever we want it gives object.
+					
+
+summary & Interview Questions
+
+1 What is Spring ?
+2 Why we use Spring ?
+3 What is IOC ?
+4 What is DI ?
+
+
+
+
+
+
