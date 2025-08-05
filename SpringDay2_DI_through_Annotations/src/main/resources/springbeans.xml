@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+
+<beans>
+
+
+
+	<bean id="emp" class="com.entity.Employee">
+
+		<property name="emp_id" value="121"></property>
+		<property name="name" value="ram"></property>
+		<property name="salary" value="13LPA"></property>
+		<property name="con" ref="con"></property>
+	</bean>
+
+
+	<bean id="con" class="com.entity.Country">
+
+		<property name="C_id" value="+91"></property>
+		<property name="name" value="IND"></property>
+	</bean>
+
+
+	<!-- <bean id="emp" class="com.entity.Employee"> <constructor-arg index="0" 
+		value="123"></constructor-arg> <constructor-arg index="1" value="sahil"></constructor-arg> 
+		<constructor-arg index="2" value="12LPA"></constructor-arg> </bean> -->
+
+
+
+</beans>
