@@ -1,0 +1,72 @@
+Todays Lecture Agenda :
+
+Spring(IOC) Annotations :
+
+ Note : (by default Spring follow singleton design pattern).
+
+
+@Component :
+it is an class level annotation, the Component annotation is an stereotype annotation that is used to mark a class as a component,
+The "@Component" annotation in Spring is used to declare a class as a Spring bean,
+which is a managed component in the Spring application context.
+It helps Spring automatically detect and manage these beans during application startup, making them available for dependency injection and other Spring features.
+
+note : Automatically registered in the application context when component scanning is enabled.
+
+
+@Value :
+it is used to inject values into spring bean field or method.
+Injects externalized values into fields
+
+
+@Configuration :
+it is class level annotation.
+Declares a class as a source of bean definitions.
+Used in place of xml configurations in Spring projects.
+no need to create springbeans.xml file
+
+
+@ComponentScan :
+Tells Spring which packages to scan for components, automatically adding them as beans.
+Automatically registers detected components as beans in the Spring context.
+Usually paired with @Configuration for code-based configuration.
+Instructs Spring to scan specified packages for annotated components (e.g., @Service, @Repository, @Controller).
+
+
+@Scope :
+Defines the lifecycle scope of a Spring bean (e.g., singleton, prototype).
+ by default Spring follow singleton design pattern 
+
+
+@Bean : 
+this is method level annotation.
+@Bean is applied to a method that returns an instance of a bean, which Spring registers in the application context.
+By default, beans are singleton-scoped, but you can set different scopes (e.g., prototype) by pairing it with @Scope.
+The @Bean annotation is used on methods within a configuration class (typically annotated with @Configuration) to define and configure beans that Spring manages in the application context. It is not used on fields or classes directly.
+
+
+
+DI based Annotations :
+
+@Autowired :
+Automatically injects a required dependency, eliminating the need for manual bean creation or wiring.
+the @Autowired annotation is used in Spring to automatically inject dependencies, making it easy to wire up components. It can be applied to constructors, fields, or methods in a class to inject a dependency that’s managed by the Spring container.
+note : no need to create springbeans.xml file.
+
+
+@Qualifier :
+Works with @Autowired to specify which bean to inject when multiple beans of the same type exist.
+The @Qualifier annotation in Spring provides a way to control which bean should be injected when there are multiple beans of the same type. Without @Qualifier, Spring would be unable to resolve ambiguity in cases where multiple beans of the same type exist, leading to errors. @Qualifier helps specify the exact bean name, allowing Spring to choose the right one for injection.
+
+
+AOP based Annotations :
+
+1 @After -
+An advice that gets executed after the join point method finishes executing, whether normally or by throwing an exception, In short it work like as finally block in core java.
+
+2 @Before - 
+These advices runs before the execution of join point methods( methods you specify);
+			
+3 @Arround -
+This is the most important and powerful advice. This advice surrounds the join point method and we can also choose whether to execute the join point method or not. We can write advice code that gets executed before and after the execution of the join point method
+

@@ -1,0 +1,202 @@
+
+Last Lecture Agenda :
+
+Introduction with Spring Core :
+
+what is spring : 
+- it is lightweight, open source, loosely couple and integrated framework for developing enterprise application in java
+- it was developed by Rod Johnson in the year 2003.
+- by using spring we can developed standalone and enterprise applications.
+- the spring framework is one of the most popular java framework and it is used by many large companies.
+- the spring framework includes several modules such as IOC,AOP,DAO,context, ORM, web MVC etc.
+- Spring can be easily integrated with others popular frameworks such as hibernate(ORM) and JPA
+- it can be helps to improve the quality maintainability, and scalability of applications
+- in a spring no need to write more code there are some annotations provide by the spring. 
+
+- Spring Framework:
+		- 2003 -- Rod Johnson -- sourceforge.net -- Open Source project.
+		- Spring 1.x
+		- Spring 2.x
+		- * Spring 3.x -- Annotation based config.
+		- * Spring 4.x => 4.x.x
+		- Spring 5.x
+		- Spring 6.x
+		
+- Spring Features/ Advantages 
+		- Modular -- different jars for different functionalities.
+		- Flexible -- Most of frameworks follow "All or nothing" policy -- Spring is exception
+		- Test Driven Development -- Unit testing is well integrated in Spring + Supprt for other testing.
+		- Maintainable/Extendable -- Start with interfaces & can change impl over the time.
+		- Exceptions -- Spring convert/wraps all checked exception into unchecked one.
+		- Dependency Injection
+
+
+IOC (Inversion of control) : spring container / IOC container
+
+- IoC container: (Inversion of control)
+		-It is used to create object of class, maintain life cycle of object, manage its state,  by spring. So it is called Loosely coupling, for this feature spring is more popular in market
+		 - Mainly it based on two concept DI(Dependency Injection) & IOC (Inversion of control)
+		 
+		- IoC -- Inversion of Control
+			 - It is an architectural(design) pattern describing that programmer do not need to create an object, instead just describe how it should be created. No need to directly connect your components & services together in program, instead just describe which services are needed by which components in a configuration file/xml file. The spring IOC container is then responsible.
+			- IOC create a singleton object means that object create only ones instance & we can use that object through out the application whenever we need.
+
+
+
+Role of IOC container - 1) create the instance/objects/beans
+                        2) configure the instance
+                        3) assemble the dependency
+
+
+IOC Container Has 2 types :
+
+ 1 BeanFactory
+	- It is Interface
+	- we can use some implemented classes using this interface
+
+ 2 ApplicationContext
+	- It is Interface
+	- we can use some implemented classes using this interface
+	- Application Context is nothing but spring container. In newer version of spring Application Context to developed enterprise application.
+	- class is used ClassPathXMLApplicationContext
+
+types : 1) ClassPathXML based
+        2) Annotation based 
+
+
+
+springbeans.xml
+
+
+
+Note : add this dependency in POM.xml file : spring core, spring context (6.0.17) with same Versions. for aop add spring boot starter aop
+
+
+
+
+Todays Lecture Agenda :
+
+			
+ DI -- Dependency Injection :
+	
+1) Dependency Injection (DI) in spring is a design pattern and core concepts that enable the implementation of IOC(Inversion Of Control).
+2) Its main task is to inject the dependency means inject one object into another object.
+3) it is used to achieved loose coupling in java 
+
+we can achieve Dependency Injection by 3 Ways :
+
+1) Setter level injection
+2) constructor level injection
+3) field level
+
+
+Todays Lecture Agenda :
+
+3) field level injection  / Annotation base using @Autowired
+
+
+Difference Between @Bean & @Component
+
+@Bean
+1 The @Bean annotation is used to define a bean method within a configuration class.
+2 This method returns an instance of the bean that you want to define.
+3 typically used when you want to define a bean for a class that you do not control, such as a third-party library
+4 you can create a bean instance and customize its behavior as you needed.
+5 @Bean methods can have arguments, which can be used to inject dependencies into the bean instance.
+6 @Bean Preferable for to wire components from 3rd-party libraries 
+
+
+@Component
+1 The @Component annotation is a stereotype annotation that is used to mark a class as a component.
+2 A component is a general-purpose object that is managed by the Spring IoC container.Other stereotype annotations, such as @Service, @Repository, and @Controller.
+3 typically used when you want to define a bean for a class that you create yourself and that has a simple initialization process
+4 It is provides a convenient way to register a class as a bean without having to define a separate configuration class.
+5 @Component classes typically use constructor or setter injection to inject dependencies.
+6 @Component Preferable for component scanning and automatic wiring.
+					
+
+
+
+
+
+
+
+
+
+
+
+
+Todays Lecture Agenda :
+
+
+AOP (Aspects Oriented Programming) : (add this dependency spring boot starter aop v(3.1.9))
+
+- The functions that span multiple points of an application are called cross-cutting concerns and these cross-cutting concerns are 
+conceptually separate from the application's business logic.
+- e.g logging, auditing, declarative transactions, security, caching, etc.
+
+Why AOP?
+
+Cross Cutting Concerns
+Fast Development (because focus on BL)
+At Runtime Enabled/Disabled (using configuration)
+
+
+1 @After -
+An advice that gets executed after the join point method finishes executing, whether normally or by throwing an exception, In short it work like as finally block in core java.
+
+2 @Before - 
+These advices runs before the execution of join point methods( methods you specify);
+			
+3 @Arround
+This is the most important and powerful advice. This advice surrounds the join point method and we can also choose whether to execute the join point method or not.
+ We can write advice code that gets executed before and after the execution of the join point method.
+
+note : @Around is combination of before and after annotation
+
+@Aspects : contains advices 
+
+
+
+
+Summary & Interview Questions
+
+1 What is Spring ?
+2 Why we use Spring?
+3 What is IOC? / what is spring core container / what are the types of IOC container
+4 what is DI (Dependency Injection) / How we can achieved DI
+5 what are core principle of spring = IOC, AOP, DAO , MVC, Context, DI etc...
+6 How to do the Annotation Based Configuration?
+7 What is @Bean Annotation?
+8 What is @Component Annotation?
+9 Explain Difference Between @Bean & @Component
+10 what is @Autowired Annotation
+11 what is @Qualifier Annotation
+12 What is AOP / Explain Annotation in AOP/ @Aspects
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
