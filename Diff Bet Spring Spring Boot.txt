@@ -1,0 +1,25 @@
+Spring and SpringBoot :
+
+Spring  :
+- To create a Spring application, the developers write lots of code.
+- Developers need to write boilerplate code for smaller tasks.
+- Developers have to define dependencies manually in the pom.xml file.
+- To run the Spring application, we need to set the server explicitly.
+- It helps to create a loosely coupled application.
+- The most important feature of the Spring Framework is dependency injection.
+- Spring is an open-source lightweight framework widely used to develop enterprise applications.
+- in spring we used @Controller Annotation
+- in spring we cannot used @CrossOrigin Annotation to connect the fronted Framework(such as Angular / React)
+
+
+Spring Boot :
+- It reduces the lines of code.
+- In Spring Boot, there is reduction in boilerplate code.
+- pom.xml file internally handles the required dependencies
+- Spring Boot provides embedded servers such as Tomcat and Jetty etc.
+- It helps to create a stand-alone application.
+- The most important feature of the Spring Boot is Autoconfiguration.
+- Spring Boot is built on top of the conventional spring framework, widely used to develop REST APIs.
+- in Spring Boot we used @RestController Annotation
+- in springBoot we can used @CrossOrigin Annotation to connect the fronted Framework(such as Angular/ React)
+

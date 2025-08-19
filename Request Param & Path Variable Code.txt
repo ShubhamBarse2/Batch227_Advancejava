@@ -1,0 +1,29 @@
+Request Param & Path Variable Code : 
+
+@RequestParam :
+
+
+pass the values in key and values format from frontend :
+
+key = stud_id       value = 101
+
+
+@DeleteMapping("/deletedata")
+	public String deleteData(@RequestParam int studid) {
+		String msg = service.deleteData(studid);
+		return msg;
+	}
+
+
+
+
+@PathVariable : 
+
+pass through the URL  like as : /101
+
+
+@DeleteMapping("/deletedata/{studid}")
+	public String deleteData(@PathVariable int studid) {
+		String msg = service.deleteData(s, studid);
+		return msg;
+	}

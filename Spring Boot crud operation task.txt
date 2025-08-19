@@ -1,0 +1,32 @@
+
+Last Lecture Agenda :
+
+CRUD : 
+
+update 
+getsingle : with HQL
+getall    : with HQL 
+
+Todays Lecture Agenda :
+
+Practise Session :
+
+Employee :
+Register :
+
+emp_id
+emp_name
+department 
+salary
+age
+
+perform Crud Operation :
+
+insert 
+delete
+update 
+getsingle : with method
+getall    : with method
+
+
+ 

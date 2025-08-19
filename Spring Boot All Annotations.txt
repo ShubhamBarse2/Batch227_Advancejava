@@ -1,0 +1,50 @@
+Spring-Boot Annotations All :
+
+note : the stereotype annotations in spring are @Component, @Service, @Repository, and @Controller.
+
+ @SpringBootApplication :
+Usage : Used to mark the main class of a Spring Boot application.
+Where it’s used: Class level.
+Description: This annotation combines three other annotations: @Configuration, @EnableAutoConfiguration, and @ComponentScan.
+
+@RestController :
+Usage: Marks a class as a controller for REST APIs.
+Where it’s used: Class level.
+Description: A combination of @Controller and @ResponseBody. It simplifies the development of RESTful web services.
+
+@RequestMapping :
+Usage: Maps HTTP requests to handler methods of MVC controllers.
+Where it’s used: Method level, class level
+Description: Specifies the path and HTTP method for a method.
+
+
+@GetMapping, @PostMapping, @PutMapping, @DeleteMapping
+Usage: Shortened versions of @RequestMapping for specific HTTP methods.
+Where it’s used: Method level.
+Description: Maps HTTP GET, POST, PUT, DELETE requests to methods.
+
+ @Service
+Usage: Marks a class as a service, typically containing business logic.
+Where it’s used: Class level.
+Description: A specialization of @Component to define service beans in Spring.
+
+@Repository
+Usage: Marks a class as a Data Access Object (DAO) and enables exception translation.
+Where it’s used: Class level.
+Description: A specialization of @Component for data access logic.
+
+@PathVariable :
+Purpose: Used to extract values from the URI path.
+Use case: Typically used when data is part of the URL itself.     note : write this like  /{stud_id}    : and pass it through the URL
+URL: /api/users/101
+Output: User ID: 101
+
+@RequestBody :
+Purpose: Used to map the request body (usually JSON) to a Java object.
+Use case: Typically used for sending data in the request payload (e.g., JSON for POST/PUT requests).
+
+@RequestParam :
+To bind HTTP request parameters (usually query parameters) to method parameters in a controller.
+To extract data sent by the client (via URL) into Java variables for further processing.
+When handling HTTP GET or delete, or update requests where query parameters need to be accessed
+Example of a query parameter  :  /?name='sahil'
