@@ -20,14 +20,27 @@ public class StudentDao {
 
 	public String insertData(Student s) {
 
-		Session ss = factory.openSession();
-		Transaction tr = ss.beginTransaction();
-		ss.persist(s);
+		Session session = null;
+		Transaction tx = null;
+		String msg = null;
 
-		tr.commit();
-		ss.close();
+		try {
+			session = factory.openSession();
+			tx = session.beginTransaction();
+			session.persist(s);
+			tx.commit();
+			msg = "Data is inserted...";
+		} catch (Exception e) {
+			if (tx != null) {
+				tx.rollback();
+			}
+		} finally {
+			if (session != null) {
+				session.close();
+			}
+		}
 
-		return "Data is inserted...";
+		return msg;
 	}
 
 	public String deleteData(int stud_id) {
